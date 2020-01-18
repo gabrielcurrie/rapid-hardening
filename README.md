@@ -2,6 +2,11 @@
 
 This document provides high-level guidance for rapidly hardening an IT environmment (containing Windows and Linux devices). Other key points of reference should be the ACSC's [Strategies to Mitigate Cyber Security Incidents](https://www.cyber.gov.au/publications/strategies-to-mitigate-cyber-security-incidents) and CIS's [Top 20 Security Controls](https://www.cisecurity.org/controls/cis-controls-list/).
 
+## Identify network
+* Scan internal IP address ranges for devices using tools such as nmap or SpiceWorks IP scanner
+* Identify applications and services running on devices
+* Identify network connectivity and Internet egress points
+
 ## Endpoints
 * Patch operating systems (e.g., using WSUS) and applications
 * Block potentially malicious extensions (e.g., PS1, HTA, CHM) from executing
