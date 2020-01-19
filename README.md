@@ -4,7 +4,7 @@ This document provides high-level guidance for rapidly hardening an IT environmm
 
 ## Identify and understand the environment
 * Scan internal IP address ranges to identify devices (e.g., using [nmap](https://nmap.org/) or SpiceWorks IP scanner)
-* Identify applications and services running on devices
+* Identify applications and services running on devices (e.g., using [WMIC](https://www.blackhillsinfosec.com/getting-started-with-sysmon/))
 * Identify network connectivity and Internet egress points
 * Identify privileged and service accounts (e.g., using [CyberArk DNA](https://www.cyberark.com/discover-privileged-accounts-exist-cyberark-dna/))
 
@@ -35,11 +35,12 @@ This document provides high-level guidance for rapidly hardening an IT environmm
 ### Protect data
 
 ## Detect and respond to attacks
-* Generate logging on endpoints (e.g., [Windows Event Logging using the NSA baseline](https://github.com/nsacyber/Event-Forwarding-Guidance))
+* Generate logging on endpoints (e.g., generating Windows Event Logging using the [NSA baseline](https://github.com/nsacyber/Event-Forwarding-Guidance) or [SwiftOnSecurity's Sysmon Config](https://github.com/SwiftOnSecurity/sysmon-config))
 * Generate network logging (e.g., DNS, DHCP, web/proxy, netflow)
 * Deploy honeypots as tripwires to alert on attacker activity (e.g., Honeyd)
-* Forward endpoint and network logs and collate in a SIEM (e.g., OSSIM, Splunk Free)
+* Forward endpoint and network logs and collate in a SIEM (e.g., [OSSIM](https://cybersecurity.att.com/products/ossim), Splunk Free, [ELK](https://www.elastic.co/what-is/elk-stack))
 * Perform analysis of collated logs to identify and triage potentially malicious events
 * Deploy tooling to enable investigations and incident response (e.g., OSQuery, Google Rapid Response)
 * Develop monitoring processes
 * Develop response processes
+* Deploy tooling to manage incident response (e.g., The Hive, FIR, Yeti, Cortex)
