@@ -32,8 +32,6 @@ This document provides high-level guidance for rapidly hardening an IT environmm
 * Prevent local users from logging in over the network
 * Prevent service accounts from logging in interactively
 
-### Protect data
-
 ## Detect and respond to attacks
 * Generate logging on endpoints (e.g., generating Windows Event Logging using the [NSA baseline](https://github.com/nsacyber/Event-Forwarding-Guidance) or [SwiftOnSecurity's Sysmon Config](https://github.com/SwiftOnSecurity/sysmon-config))
 * Generate network logging (e.g., DNS, DHCP, web/proxy, netflow)
