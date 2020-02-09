@@ -17,7 +17,7 @@ This document provides high-level guidance for rapidly hardening an IT environmm
 * Block potentially malicious extensions (e.g., `.PS1`, `.HTA`, `.CHM`) from executing
 * [Limit Microsoft Office macro execution](https://www.cyber.gov.au/publications/microsoft-office-macro-security)
 * Secure client applications (e.g., Chrome) using standards such as [CIS Benchmarks](https://www.cisecurity.org/cis-benchmarks/)
-* [Disable Powershell v2](https://devblogs.microsoft.com/powershell/windows-powershell-2-0-deprecation/) and enable -[Constrained Language mode](https://www.petri.com/protect-malware-enforcing-powershell-constrained-language-mode)
+* [Disable Powershell v2](https://devblogs.microsoft.com/powershell/windows-powershell-2-0-deprecation/) and enable [Constrained Language mode](https://www.petri.com/protect-malware-enforcing-powershell-constrained-language-mode)
 
 ### Protect network infrastructure and connectivity
 * Secure the boundary by deploying and configuring firewalls, IDS, IPS, web proxies, and email scanning appliances
