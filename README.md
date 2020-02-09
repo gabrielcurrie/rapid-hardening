@@ -3,10 +3,10 @@
 This document provides high-level guidance for rapidly hardening an IT environmment (containing Windows and Linux devices). Other key points of reference should be the ACSC's [Strategies to Mitigate Cyber Security Incidents](https://www.cyber.gov.au/publications/strategies-to-mitigate-cyber-security-incidents) and CIS's [Top 20 Security Controls](https://www.cisecurity.org/controls/cis-controls-list/).
 
 ## Identify and understand the environment
-* Scan internal IP address ranges to identify devices (e.g., using [nmap](https://nmap.org/) or SpiceWorks IP scanner)
-* Identify applications and services running on devices (e.g., using [WMIC](https://www.blackhillsinfosec.com/getting-started-with-sysmon/))
+* Scan internal IP address ranges to identify devices (e.g., using [nmap](https://nmap.org/) or the SpiceWorks IP scanner)
+* Identify applications and services running on devices (e.g., using [WMIC](https://helpdeskgeek.com/how-to/generate-a-list-of-installed-programs-in-windows/))
 * Identify network connectivity and Internet egress points
-* Identify privileged and service accounts (e.g., using [CyberArk DNA](https://www.cyberark.com/discover-privileged-accounts-exist-cyberark-dna/))
+* Identify privileged and service accounts (e.g., using the [net localgroup](https://superuser.com/questions/339071/where-can-i-see-the-list-of-administrators-in-windows-7) or [net group command](https://social.technet.microsoft.com/Forums/windows/en-US/455e7ec7-5d77-4fda-9b95-1eea0380fc49/how-to-find-users-who-have-local-administratordomain-admin-rights-through-command-line?forum=itproxpsp), or a tool such as [CyberArk DNA](https://www.cyberark.com/discover-privileged-accounts-exist-cyberark-dna/).)
 
 ## Protect the environment
 ### Protect endpoints (i.e. workstations and servers)
@@ -21,7 +21,7 @@ This document provides high-level guidance for rapidly hardening an IT environmm
 
 ### Protect network infrastructure and connectivity
 * Secure the boundary by deploying and configuring firewalls, IDS, IPS, web proxies, and email scanning appliances
-* Filter email and web content (e.g., block known malicious sites, block commonly abused TLDs, block commonly malicious file types, sandbox executables)
+* Filter email and web content (e.g., block known malicious sites, block [commonly abused TLDs](https://www.spamhaus.org/statistics/tlds/), block commonly malicious file types, sandbox executables)
 * Prevent endpoints from directly communicating with the Internet and enforce proxying
 * Segregate/segment network into defined zones: https://www.cyber.gov.au/publications/implementing-network-segmentation-and-segregation
 
