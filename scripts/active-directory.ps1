@@ -1,4 +1,4 @@
-# This script is used to create new deactivated users in Active Directory.
+### CREATE NEW DEACTIVATED USERS IN ACTIVE DIRECTORY
 # TODO Import user data from a CSV list.
 
 # Import the Active Directory module in PowerShell.
@@ -19,3 +19,20 @@ New-ADUser
 Add-ADGroupMember
 	-Identity $GroupName
 	-Members $CommaSeparatedMembers
+
+### RESET ACTIVE DIRECTORY ACCOUNT PASSWORDS
+
+Set-ADAccountPassword 
+	-Identity $username 
+	-Reset
+	-NewPassword (ConvertTo-SecureString "$Password" -AsPlainText -Force)
+
+### INTERROGATE AD
+
+Get-ADPrincipalGroupMembership -Identity $username
+Get-ADGroupMember -Identity $groupname
+
+### REMEDIATE COMPROMISED ACCOUNTS
+
+Remove-AdUser -Identity $username
+Disable-AdAccount -Identity $username
