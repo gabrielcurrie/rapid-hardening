@@ -13,6 +13,9 @@ This document provides high-level guidance for rapidly hardening an IT environmm
 * Patch operating systems (e.g., using WSUS) and applications to the latest available version
 * Enable host firewalls (e.g., Windows Defender Firewall) to prevent workstation-workstation communication
 * Deploy anti-virus (e.g., [Windows Defender](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-antivirus/windows-defender-antivirus-in-windows-10) or [Sophos Home](https://home.sophos.com/en-us/index2.aspx) on Windows, or [Clam AV](https://www.clamav.net/) on Linux)
+  * Ensure that anti-virus is up-to-date and has the latest signatures.
+  * Remove any anti-virus exclusions.
+  * Run on-demand anti-virus scan.
 * Enable application whitelisting (e.g., using AppLocker or WDAC) and implement [Microsoft recommended block rules](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-block-rules)
 * Block potentially malicious extensions (e.g., `.PS1`, `.HTA`, `.CHM`) from executing
 * [Limit Microsoft Office macro execution](https://www.cyber.gov.au/publications/microsoft-office-macro-security)
